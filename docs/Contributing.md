@@ -13,7 +13,7 @@ Contributions are welcome! If you'd like to contribute to Probabilistic, please 
 3. **Commit Your Changes**
 
    ```bash
-   git commit -m "Add YourFeature"
+   git commit -m "add: YourFeature"
    ```
 
 4. **Push to the Branch**

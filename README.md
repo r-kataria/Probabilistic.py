@@ -1,6 +1,6 @@
-# Probabilistic
+# Probabilistic.py
 
-Probabilistic is a Python library designed to facilitate the probabilistic execution of functions and the analysis of their outcome distributions. Whether you're simulating uncertain events, performing randomized experiments, or simply adding an element of chance to your applications, Probabilistic provides a straightforward and flexible toolkit to meet your needs.
+Probabilistic is a Python library designed to facilitate the probabilistic execution of functions and the analysis of their outcome distributions. Whether you're simulating uncertain events, performing randomized experiments, or adding an element of chance to your applications, Probabilistic provides a straightforward and flexible toolkit to meet your needs.
 
 ## Table of Contents
 
@@ -8,22 +8,16 @@ Probabilistic is a Python library designed to facilitate the probabilistic execu
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Documentation](#documentation)
-  - [API Reference](docs/API_Reference.md)
-  - [Examples](docs/Examples.md)
-  - [Contributing](docs/Contributing.md)
 - [Support This Project](#support-this-project)
 
 
 ## Features
+- [x] Probabilistic Function Function
+- [x] Mutual Exclusivity Function
+- [x] Distribution Analysis Function
+- [x] Customizable Random Engines
 
-- [x] **Probabilistic Function Execution**: Execute functions based on specified probabilities using decorators.
-- [x] **Batch Execution**: Execute multiple functions independently with individual probabilities.
-- [x] **Distribution Analysis**: Assess the distribution of outcomes over multiple trials for single or multiple functions.
-
-- [ ] Customizable Random Engines
-- [ ] Conditional Probability-Based Execution
-- [ ] Mutual Exclusivity Execution
-- [ ] Dependent Function Execution
+- [ ] Conditional Probability-Based Function
 - [ ] Probability Chains
 - [ ] Asynchronous Execution Support
 - [ ] Integration with Popular Libraries like NumPy and Pandas for enhanced data handling and analysis.
@@ -37,34 +31,20 @@ pip install probabilistic.py
 ```
 
 ## Quick Start
+
 Here's a quick example to get you started with Probabilistic.
 
-### Using the `function` Decorator
-
 ```python
 import probabilistic
 
-@probabilistic.function(0.5)
-def greet():
-    print("Hello, World!")
+def hello():
+    print("Hello!")
 
-# Execute the function with a 50% chance
-greet()
-```
+# Create a probabilistic function with a 50% execution probability
+maybe_hello = probabilistic.function(func=hello, p=0.5)
 
-### Executing Multiple Functions with `execute`
-
-```python
-import probabilistic
-
-def foo():
-    print("Foo executed")
-
-def bar():
-    print("Bar executed")
-
-# Execute `foo` and `bar` each with a 70% and 30% probability respectively
-probabilistic.execute([foo, bar], p=[0.7, 0.3])
+# Execute the probabilistic function
+maybe_hello()
 ```
 
 ## Documentation

@@ -1,13 +1,11 @@
 from .core import (
     function,
-    execute,
-    distribution_function,
-    distribution_execute
+    mutual_function,
+    distribution_function
 )
 
 __all__ = [
     "function",
-    "execute",
-    "distribution_function",
-    "distribution_execute"
+    "mutual_function",
+    "distribution_function"
 ]
